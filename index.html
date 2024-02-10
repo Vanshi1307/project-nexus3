@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexus info - Portfolio">
+  <meta name="keywords" content="software, technology, AI, web development">
+  <title>Nexus Info Company</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #1a1a1a; /* Dark background color */
+      color: #fff; /* Light text color */
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 50px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff9900;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ff9900; /* Accent color */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Our Services Section Styling */
+    #products h2 {
+      color: #ff9900;
+    }
+
+    #products ul {
+      margin-top: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #products li {
+      color: #ff9900;
+      padding: 15px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-size: cover;
+      background-color: #1a1a1a;
+      transition: background-color 0.3s ease;
+    }
+
+    #products li:hover {
+      background-color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #ff9900;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #ff9900;
+    }
+
+    button {
+      background-color: #ff9900;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    /* About Us Section Styling */
+    #about {
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    #about h2 {
+      color: #ff9900;
+    }
+
+    #about p {
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    
+
+    /* Particle Animation */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #1a1a1a;
+      z-index: -1;
+    }
+
+    /* Copyright Section */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .social-media-links-footer a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-media-links-footer a:hover {
+      color: #ff9900;
+    }
+  </style>
+</head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"></script>
+
+  <div id="particles-js"></div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to Nexus Info Company</h1>
+    <img src="https://nexusinfo.in/assets/images/HD-Wallpaper.jpg" alt="Image">
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Nexus offers a diverse range of digital solutions, including websites, E-Commerce platforms, educational websites, career-enriching internships. Transform your business digitally with our cutting-edge solutions, tailored to boost your online presence and drive unparalleled success. Step into a world where technology meets progress, and let Nexus Info be your partner in achieving new heights of digital growth.</p>
+    <div class="rectangle-box"></div>
+  </section>
+
+  <section id="products">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Software & Service</li>
+      <li>E-Learning</li>
+      <li>Digital Marketing</li>
+      <li>Business Strategies</li>
+      <li>Career Growth</li>
+    </ul>
+  </section>
+
+  <!-- Inside your existing form tag -->
+ <section>
+    <div class="container shadow py-5 my-5">
+      <div class="row py-3 justify-content-center">
+        <div class="col-md-8 col-sm-12">
+          <form onsubmit="submitForm(); return false;" id="reservationForm">
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control border-dark" placeholder="Name" id="name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control border-dark" placeholder="Email" id="email" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="col-md-12 col-sm-12">
+                <label for="message">Message</label>
+                <textarea class="form-control border-dark" id="message"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="col-12 btn border-dark custom-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Particle.js Library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Particle Animation
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#ff9900' },
+        shape: { type: 'circle', stroke: { width: 0, color: '#ff9900' }, polygon: { nb_sides: 5 }, image: { src: 'img/github.svg', width: 100, height: 100 } },
+        opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+        size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+        line_linked: { enable: true, distance: 150, color: '#ff9900', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+      },
+      retina_detect: true
+    });
+  </script>
+
+  <!-- Add this script at the end of the body tag -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+<script>
+ 
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEIzin8rjNvXAzuw5bhCJekoP4N34qTGQ",
+    authDomain: "techy-bcbd3.firebaseapp.com",
+    projectId: "techy-bcbd3",
+  storageBucket: "techy-bcbd3.appspot.com",
+  messagingSenderId: "376430176133",
+  appId: "1:376430176133:web:042be2aff5dfd419dcc6ec",
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  // Reference to the database
+  var database = firebase.database();
+
+  // Function to handle form submission
+  function submitForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Save form data to Firebase
+    database.ref('reservations').push({
+      name: name,
+      email: email,
+     message: message
+    })
+      
+  
+  .then(function () {
+        // Reset the form after successful submission
+        document.getElementById('reservationForm').reset();
+        alert(' submitted successfully!');
+      })
+      .catch(function (error) {
+        console.error('Error submitting:', error);
+        alert('Error submitting . Please try again later.');
+      });
+  
+    }
+
+</script>
+
+
+</body>
+</html>
